@@ -7,8 +7,6 @@ public class Product {
     private int availableQuantity;
     private String comment;
 
-
-
     public void Product(String productName,int dueDate, int entryDate, String manufacturerName, double productMass,int availableQuantity, String comment)
     {
         this.productName=productName;
