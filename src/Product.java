@@ -26,4 +26,51 @@ public class Product {
         this.productName = productName;
     }
 
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+
+    public void setAvailableQuantity(int availableQuantity) {
+        this.availableQuantity = availableQuantity;
+    }
+
+    public int getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(int dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public int getEntryDate() {
+        return entryDate;
+    }
+
+    public void setEntryDate(int entryDate) {
+        this.entryDate = entryDate;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getManufacturerName() {
+        return manufacturerName;
+    }
+
+    public void setManufacturerName(String manufacturerName) {
+        this.manufacturerName = manufacturerName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductMass(double productMass) {
+        this.productMass = productMass;
+    }
 }
