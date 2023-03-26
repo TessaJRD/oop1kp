@@ -1,14 +1,16 @@
+import java.util.Date;
+
 public class Product {
     private String name;
-    private int dueDate;
-    private int entryDate;
+    private Date dueDate;
+    private Date entryDate;
     private String manufacturerName;
     private double mass;
     private int availableQuantity;
     private int place;
     private String comment;
 
-    public Product(String name, int dueDate, int entryDate, String manufacturerName, double mass, int availableQuantity, int place, String comment) {
+    public Product(String name, Date dueDate, Date entryDate, String manufacturerName, double mass, int availableQuantity, int place, String comment) {
         this.name = name;
         this.dueDate = dueDate;
         this.entryDate = entryDate;
@@ -43,19 +45,19 @@ public class Product {
         this.availableQuantity = availableQuantity;
     }
 
-    public int getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(int dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 
-    public int getEntryDate() {
+    public Date getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(int entryDate) {
+    public void setEntryDate(Date entryDate) {
         this.entryDate = entryDate;
     }
 
