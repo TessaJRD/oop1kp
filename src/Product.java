@@ -1,29 +1,38 @@
 public class Product {
-    private String productName;
+    private String name;
     private int dueDate;
     private int entryDate;
     private String manufacturerName;
-    private double productMass;
+    private double mass;
     private int availableQuantity;
+    private int place;
     private String comment;
 
-    public void Product(String productName,int dueDate, int entryDate, String manufacturerName, double productMass,int availableQuantity, String comment)
-    {
-        this.productName=productName;
-        this.dueDate=dueDate;
-        this.entryDate=entryDate;
-        this.manufacturerName=manufacturerName;
-        this.productMass=productMass;
-        this.availableQuantity=availableQuantity;
-        this.comment=comment;
+    public Product(String name, int dueDate, int entryDate, String manufacturerName, double mass, int availableQuantity, int place, String comment) {
+        this.name = name;
+        this.dueDate = dueDate;
+        this.entryDate = entryDate;
+        this.manufacturerName = manufacturerName;
+        this.mass = mass;
+        this.availableQuantity = availableQuantity;
+        this.place = place;
+        this.comment = comment;
     }
 
-    public double getProductMass() {
-        return productMass;
+    public int getPlace() {
+        return place;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setPlace(int place) {
+        this.place = place;
+    }
+
+    public double mass() {
+        return mass;
+    }
+
+    public void name(String name) {
+        this.name = name;
     }
 
     public int getAvailableQuantity() {
@@ -66,11 +75,11 @@ public class Product {
         this.manufacturerName = manufacturerName;
     }
 
-    public String getProductName() {
-        return productName;
+    public String name() {
+        return name;
     }
 
     public void setProductMass(double productMass) {
-        this.productMass = productMass;
+        this.mass = mass;
     }
 }
