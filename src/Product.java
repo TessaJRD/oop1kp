@@ -21,28 +21,12 @@ public class Product {
         this.comment = comment;
     }
 
-    public int getPlace() {
-        return place;
+    public String getName() {
+        return name;
     }
 
-    public void setPlace(int place) {
-        this.place = place;
-    }
-
-    public double mass() {
-        return mass;
-    }
-
-    public void name(String name) {
+    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAvailableQuantity() {
-        return availableQuantity;
-    }
-
-    public void setAvailableQuantity(int availableQuantity) {
-        this.availableQuantity = availableQuantity;
     }
 
     public Date getDueDate() {
@@ -61,14 +45,6 @@ public class Product {
         this.entryDate = entryDate;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
     public String getManufacturerName() {
         return manufacturerName;
     }
@@ -77,11 +53,35 @@ public class Product {
         this.manufacturerName = manufacturerName;
     }
 
-    public String name() {
-        return name;
+    public double getMass() {
+        return mass;
     }
 
-    public void setProductMass(double productMass) {
+    public void setMass(double mass) {
         this.mass = mass;
+    }
+
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+
+    public void setAvailableQuantity(int availableQuantity) {
+        this.availableQuantity = availableQuantity;
+    }
+
+    public int getPlace() {
+        return place;
+    }
+
+    public void setPlace(int place) {
+        this.place = place;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
