@@ -7,7 +7,7 @@ public class Product {
     private String manufacturerName;
     private double mass;
     private int availableQuantity;
-    private int place;
+    private String place;
     private String comment;
 
     public Product(String name, Date dueDate, Date entryDate, String manufacturerName, double mass, int availableQuantity, int place, String comment) {

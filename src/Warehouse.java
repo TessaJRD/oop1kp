@@ -40,15 +40,17 @@ public class Warehouse {
         System.out.print("Enter manufacturer name: ");
         String manufacturer = scanner.nextLine();
 
-        System.out.print("Enter unit of measurement (kilograms, liters): ");
-        String unitOfMeasurement = scanner.nextLine();
+        System.out.print("Enter mass (kilograms, liters): ");
+        double mass = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.print("Enter availableQuantity: ");
         int availableQuantity = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Enter location: ");
-        String location = scanner.nextLine();
+        System.out.print("Enter place: ");
+        int place = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.print("Enter comment: ");
         String comment = scanner.nextLine();
@@ -60,4 +62,41 @@ public class Warehouse {
                 return;
             }
     }
+        int section = 1;
+        int shelf = 1;
+        int number = 1;
+        for (Product product : products) {
+            if (product.getPlace().startsWith(section + "-" + shelf)) {
+                if (product.getDueDate().equals(dueDate)) {
+                    number++;
+                    if (number > 10) {
+                        shelf++;
+                        number = 1;
+                        if (shelf > 10) {
+                            section++;
+                            shelf = 1;
+                            if (section > 10) {
+                                System.out.println("No more space in warehouse. Product not added.");
+                                return;
+                            }
+                        }
+                    }
+                } else {
+                    shelf++;
+                    number = 1;
+                    if (shelf > 10) {
+                        section++;
+                        shelf = 1;
+                        if (section > 10) {
+                            System.out.println("No more space in warehouse. Product not added.");
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+        place = section + "-" + shelf + "-" + number;
+
+        // Add the new product to the warehouse
+        products.add(new Product(name, dueDate, entryDate, manufacturer, mass, availableQuantity, place, comment);
 }
