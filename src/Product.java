@@ -1,16 +1,17 @@
-import java.util.Date;
-
+import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement(name="product")
 public class Product {
     private String name;
-    private Date dueDate;
-    private Date entryDate;
+    private LocalDate dueDate;
+    private LocalDate entryDate;
     private String manufacturerName;
     private double mass;
-    private int availableQuantity;
+    protected int availableQuantity;
     private String place;
     private String comment;
 
-    public Product(String name, Date dueDate, Date entryDate, String manufacturerName, double mass, int availableQuantity, int place, String comment) {
+    public Product(String name, LocalDate dueDate, LocalDate entryDate, String manufacturerName, double mass, int availableQuantity, String place, String comment) {
         this.name = name;
         this.dueDate = dueDate;
         this.entryDate = entryDate;
@@ -29,19 +30,19 @@ public class Product {
         this.name = name;
     }
 
-    public Date getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
-    public Date getEntryDate() {
+    public LocalDate getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(Date entryDate) {
+    public void setEntryDate(LocalDate entryDate) {
         this.entryDate = entryDate;
     }
 
@@ -69,11 +70,11 @@ public class Product {
         this.availableQuantity = availableQuantity;
     }
 
-    public int getPlace() {
+    public String getPlace() {
         return place;
     }
 
-    public void setPlace(int place) {
+    public void setPlace(String place) {
         this.place = place;
     }
 
@@ -83,5 +84,19 @@ public class Product {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Override
+    public String toString() {
+        return "Product:" +
+                "name='" + name + '\'' +
+                ", dueDate=" + dueDate +
+                ", entryDate=" + entryDate +
+                ", manufacturerName='" + manufacturerName + '\'' +
+                ", mass=" + mass +
+                ", availableQuantity=" + availableQuantity +
+                ", place=" + place +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }
