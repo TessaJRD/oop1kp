@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ec47810-0925-4043-a8c0-82b0a1e70e83" name="Changes" comment="create">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehouseModification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehousePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MenuHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Potato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseCleaner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseConsolePrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kpoop1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kpoop1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehouseModification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehouseModification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehousePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehousePrinter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,17 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Rosi/Desktop/kpoop1/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rosi/Desktop/kpoop1/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -139,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680971987958</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="create">
+      <created>1682884778800</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682884778800</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

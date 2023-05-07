@@ -1,17 +1,18 @@
 import java.time.LocalDate;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="product")
-public class Product {
+public class Product implements ProductDescription{
     private String name;
-    private LocalDate dueDate;
-    private LocalDate entryDate;
+    private Date dueDate;
+    private Date entryDate;
     private String manufacturerName;
     private double mass;
-    protected int availableQuantity;
+    private int availableQuantity;
     private String place;
     private String comment;
 
-    public Product(String name, LocalDate dueDate, LocalDate entryDate, String manufacturerName, double mass, int availableQuantity, String place, String comment) {
+    public Product(String name, Date dueDate, Date entryDate, String manufacturerName, double mass, int availableQuantity, String place, String comment) {
         this.name = name;
         this.dueDate = dueDate;
         this.entryDate = entryDate;
@@ -30,19 +31,19 @@ public class Product {
         this.name = name;
     }
 
-    public LocalDate getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 
-    public LocalDate getEntryDate() {
+    public Date getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(LocalDate entryDate) {
+    public void setEntryDate(Date entryDate) {
         this.entryDate = entryDate;
     }
 
@@ -98,5 +99,10 @@ public class Product {
                 ", place=" + place +
                 ", comment='" + comment + '\'' +
                 '}';
+    }
+
+    @Override
+    public String describeProduct() {
+        return this.toString();
     }
 }

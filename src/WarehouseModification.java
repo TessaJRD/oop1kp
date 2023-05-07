@@ -1,5 +1,6 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -117,7 +118,7 @@ public class WarehouseModification extends Warehouse{
         String name = scanner.nextLine();
 
         System.out.print("Enter the quantity to remove: ");
-        double quantityToRemove = scanner.nextDouble();
+        int quantityToRemove = scanner.nextInt();
 
         List<Product> matchingProducts = new ArrayList<>();
 
@@ -135,7 +136,7 @@ public class WarehouseModification extends Warehouse{
 
         matchingProducts.sort((p1, p2) -> p2.getDueDate().compareTo(p1.getDueDate()));//?
 
-        double remainingQuantityToRemove = quantityToRemove;
+        int remainingQuantityToRemove = quantityToRemove;
 
         List<String> removedProductInfoList = new ArrayList<>();
 
@@ -144,9 +145,9 @@ public class WarehouseModification extends Warehouse{
                 break;
             }
 
-            double quantityToRemoveFromProduct = Math.min(product.getAvailableQuantity(), remainingQuantityToRemove);
+            int quantityToRemoveFromProduct = Math.min(product.getAvailableQuantity(), remainingQuantityToRemove);
 
-            product.availableQuantity -= quantityToRemoveFromProduct;
+            product.setAvailableQuantity(product.getAvailableQuantity() - quantityToRemoveFromProduct);
             remainingQuantityToRemove -= quantityToRemoveFromProduct;
 
             String removedProductInfo = quantityToRemoveFromProduct + " " + product.getMass() +
@@ -183,9 +184,9 @@ public class WarehouseModification extends Warehouse{
                     break;
                 }
 
-                double quantityToRemoveFromProduct = Math.min(product.getAvailableQuantity(), remainingQuantityToRemove);
+                int quantityToRemoveFromProduct = Math.min(product.getAvailableQuantity(), remainingQuantityToRemove);
 
-                product.availableQuantity -= quantityToRemoveFromProduct;
+                product.setAvailableQuantity(product.getAvailableQuantity()-quantityToRemoveFromProduct);
                 remainingQuantityToRemove -= quantityToRemoveFromProduct;
 
                 String removedProductInfo = quantityToRemoveFromProduct + " " + product.getMass() +
